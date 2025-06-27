@@ -71,4 +71,4 @@ dotnet run
 - NAudio
 
 ### 👨‍💻 Author
-#### Akshit Bansal
+#### Akshit Bansal (artistbansal2004@gmail.com)
