@@ -1,0 +1,17 @@
+﻿<Window x:Class="AudioVisualizer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Audio Visualizer" Height="400" Width="800"
+        Background="Transparent"
+        Topmost="True"
+        ShowInTaskbar="False"
+        ResizeMode="NoResize">
+    <Grid>
+        <Canvas Name="VisualizerCanvas"
+        HorizontalAlignment="Stretch"
+        VerticalAlignment="Stretch"
+        Background="Transparent"/>
+    </Grid>
+</Window>
