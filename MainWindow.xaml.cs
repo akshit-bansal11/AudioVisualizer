@@ -233,12 +233,21 @@ namespace AudioVisualizer
             double canvasHeight = VisualizerCanvas.ActualHeight;
 
             double spacing = 6;
-            double barWidth = Math.Max(6, (canvasWidth - spacing * (BarCount - 1)) / BarCount);
+            double barWidth = 2;
 
             for (int i = 0; i < BarCount; i++)
             {
                 double level = bandLevels[i];
                 level = Math.Min(1.0, level * Sensitivity); // Use Sensitivity constant
+
+                if (level < 0.02)
+                {
+                    _bars[i].Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    _bars[i].Visibility = Visibility.Visible;
+                }
 
                 double targetHeight = level * (canvasHeight - 20);
                 targetHeight = Math.Max(10, targetHeight);
